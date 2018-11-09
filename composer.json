@@ -1,0 +1,39 @@
+{
+	"name": "dmitxe/yii2-wiki",
+	"type": "yii2-extension",
+	
+	"description": "Yii2-Wiki is a flexible implementation of a wiki for Yii2",
+	"keywords": ["yii2", "wiki", "module"],
+	
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Dmitry Khe",
+			"email": "xedmitry@yandex.ru",
+			"homepage": "http://dmitxe.ru"
+		}
+	],
+	
+	"minimum-stability": "stable",
+	"support": {
+		"source": "https://github.com/dmitxe/yii2-wiki",
+		"issues": "https://github.com/dmitxe/yii2-wiki/issues"
+	},
+	
+	"require": {
+		"php": ">=5.4.0",
+		
+		"yiisoft/yii2": "2.0.*",
+	  	"yiisoft/yii2-bootstrap": "*",
+		"yiisoft/yii2-codeception": "~2.0.0",
+		"yiisoft/yii2-codeception": "~2.0.0",
+        "erusev/parsedown": "dev-master",
+		"yii2mod/yii2-markdown": "*"
+	},
+	
+	"autoload": {
+		"psr-4": {
+			"dmitxe\\yii2\\wiki\\": ""
+		}
+	}
+}
