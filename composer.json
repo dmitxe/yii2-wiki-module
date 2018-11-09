@@ -22,14 +22,12 @@
 	
 	"require": {
 		"php": ">=5.4.0",
-		
 		"yiisoft/yii2": "2.0.*",
 	  	"yiisoft/yii2-bootstrap": "*",
-		"yiisoft/yii2-codeception": "~2.0.0",
-        "erusev/parsedown": "dev-master",
+        "erusev/parsedown": "*",
 		"yii2mod/yii2-markdown": "*"
 	},
-	
+
 	"autoload": {
 		"psr-4": {
 			"dmitxe\\yii2\\wiki\\": ""
