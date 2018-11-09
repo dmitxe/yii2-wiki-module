@@ -24,7 +24,7 @@ to the `require` section of your `composer.json` file.
 ###### Migration
 For the default table structure execute the provided migration as follows:
 
-	yii migrate --migrationPath=@vendor/dmitxe/yii2-wiki-module/migrations
+	php yii migrate --migrationPath=@vendor/dmitxe/yii2-wiki-module/migrations
 
 To remove the table just do the same migration downwards.
 

@@ -27,7 +27,7 @@ class CategoryController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'update', 'delete'],
+                        'actions' => ['index', 'create', 'view', 'update', 'delete'],
                         'roles' => $this->module->editorRole ? [$this->module->editorRole] : ['?', '@'],
                     ],
                 ],
