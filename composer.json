@@ -1,5 +1,5 @@
 {
-	"name": "dmitxe/yii2-wiki",
+	"name": "dmitxe/yii2-wiki-module",
 	"type": "yii2-extension",
 	
 	"description": "Yii2-Wiki is a flexible implementation of a wiki for Yii2",
