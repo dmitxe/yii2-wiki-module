@@ -16,8 +16,8 @@
 	
 	"minimum-stability": "stable",
 	"support": {
-		"source": "https://github.com/dmitxe/yii2-wiki",
-		"issues": "https://github.com/dmitxe/yii2-wiki/issues"
+		"source": "https://github.com/dmitxe/yii2-wiki-module",
+		"issues": "https://github.com/dmitxe/yii2-wiki-module/issues"
 	},
 	
 	"require": {
