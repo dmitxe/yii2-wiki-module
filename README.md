@@ -7,13 +7,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-$ composer require dmitxe/yii2-wiki
+$ composer require dmitxe/yii2-wiki-module
 ```
 
 or add
 
 ```
-"dmitxe/yii2-wiki": "dev-master"
+"dmitxe/yii2-wiki-module": "dev-master"
 ```
 
 to the `require` section of your `composer.json` file.
@@ -24,7 +24,7 @@ to the `require` section of your `composer.json` file.
 ###### Migration
 For the default table structure execute the provided migration as follows:
 
-	yii migrate --migrationPath=@vendor/dmitxe/yii2-wiki/migrations
+	yii migrate --migrationPath=@vendor/dmitxe/yii2-wiki-module/migrations
 
 To remove the table just do the same migration downwards.
 
