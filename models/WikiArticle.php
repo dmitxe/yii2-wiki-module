@@ -89,10 +89,10 @@ class WikiArticle extends \yii\db\ActiveRecord
         if (parent::beforeSave($insert)) {
             if ($insert) {
                 $this->created_by = date('Y-m-d H:i:s');
-                $this->created_user_id = Yii::$app->user->isGuest ? Yii::$app->user->id : null;
+                $this->created_user_id = !Yii::$app->user->isGuest ? Yii::$app->user->id : null;
             }
             $this->updated_by = date('Y-m-d H:i:s');
-            $this->updated_user_id = Yii::$app->user->isGuest ? Yii::$app->user->id : null;
+            $this->updated_user_id = !Yii::$app->user->isGuest ? Yii::$app->user->id : null;
             return true;
         } else {
             return false;

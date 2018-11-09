@@ -5,7 +5,7 @@ namespace dmitxe\yii2\wiki\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use dmitxe\yii2\models\WikiArticle;
+use dmitxe\yii2\wiki\models\WikiArticle;
 
 /**
  * WikiArticleSearch represents the model behind the search form of `dmitxe\yii2\wiki\models\WikiArticle`.

@@ -65,6 +65,7 @@ class ArticleController extends Controller
      */
     public function actionAdmin()
     {
+        $this->layout = $this->module->editorLayout;
         $searchModel = new WikiArticleSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -98,6 +99,7 @@ class ArticleController extends Controller
      */
     public function actionCreate()
     {
+        $this->layout = $this->module->editorLayout;
         $model = new WikiArticle();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -118,6 +120,7 @@ class ArticleController extends Controller
      */
     public function actionUpdate($id)
     {
+        $this->layout = $this->module->editorLayout;
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

@@ -1,5 +1,5 @@
-# yii2-wiki-module
-Yii2-Wiki-Module is a flexible implementation of a simple wiki for Yii2
+# yii2-wiki
+Yii2-Wiki is a flexible implementation of a wiki for Yii2
 
 ## Installation
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
@@ -7,13 +7,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-$ composer require dmitxe/yii2-wiki-module
+$ composer require dmitxe/yii2-wiki
 ```
 
 or add
 
 ```
-"dmitxe/yii2-wiki-module": "dev-master"
+"dmitxe/yii2-wiki": "dev-master"
 ```
 
 to the `require` section of your `composer.json` file.
@@ -24,7 +24,7 @@ to the `require` section of your `composer.json` file.
 ###### Migration
 For the default table structure execute the provided migration as follows:
 
-	yii migrate --migrationPath=@vendor/dmitxe/yii2-wiki-module/migrations
+	yii migrate --migrationPath=@vendor/dmitxe/yii2-wiki/migrations
 
 To remove the table just do the same migration downwards.
 
@@ -37,7 +37,8 @@ add the following entry to the modules-part of your config-file:
 'modules'=>[
 	'wiki'=>[
 		'class'=>'dmitxe\yii2\wiki\Module',
-		'editorRole'=>'administrator'
+		'editorRole'=>'administrator' // set false for quests
+		'editorLayout' => '//main' 
 	],
 ],
 

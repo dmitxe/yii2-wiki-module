@@ -15,7 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?php if ($this->context->module->editorRole && Yii::$app->user->can($this->context->module->editorRole)) { ?>
+    <?php if (($this->context->module->editorRole && Yii::$app->user->can($this->context->module->editorRole))
+        || !$this->context->module->editorRole) { ?>
     <p>
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [

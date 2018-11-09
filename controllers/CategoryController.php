@@ -5,6 +5,7 @@ namespace dmitxe\yii2\wiki\controllers;
 use Yii;
 use dmitxe\yii2\wiki\models\WikiCategory;
 use dmitxe\yii2\wiki\models\WikiCategorySearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -20,6 +21,17 @@ class CategoryController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index', 'create', 'view', 'update', 'delete'],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index', 'view', 'update', 'delete'],
+                        'roles' => $this->module->editorRole ? [$this->module->editorRole] : ['?', '@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -27,6 +39,12 @@ class CategoryController extends Controller
                 ],
             ],
         ];
+    }
+
+    public function beforeAction($action)
+    {
+        $this->layout = $this->module->editorLayout;
+        return parent::beforeAction($action);
     }
 
     /**
